@@ -14,11 +14,6 @@ public class DoctorController {
     @Autowired
     private DoctorImplementationService doctorImplementationService;
 
-    @GetMapping("/")
-    public String index() {
-        return "/";
-    }
-
     @PostMapping("/save")
     public boolean createDoctor(@RequestBody Doctor doctor){
         return doctorImplementationService.create(doctor);
